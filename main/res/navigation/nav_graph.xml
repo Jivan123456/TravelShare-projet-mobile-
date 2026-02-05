@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/discoverFragment">
+
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.example.travelshare.fragments.DiscoverFragment"
+        android:label="@string/discover"
+        tools:layout="@layout/fragment_discover" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.travelshare.fragments.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.travelshare.fragments.MapFragment"
+        android:label="@string/map"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.travelshare.fragments.NotificationsFragment"
+        android:label="@string/notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.travelshare.fragments.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/photoDetailFragment"
+        android:name="com.example.travelshare.fragments.PhotoDetailFragment"
+        android:label="@string/photo_detail"
+        tools:layout="@layout/fragment_photo_detail" >
+        <argument
+            android:name="photoId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.travelshare.fragments.AuthFragment"
+        android:label="@string/login_register"
+        tools:layout="@layout/fragment_auth" />
+
+    <fragment
+        android:id="@+id/publishPhotoFragment"
+        android:name="com.example.travelshare.fragments.PublishPhotoFragment"
+        android:label="@string/publish_photo"
+        tools:layout="@layout/fragment_publish_photo" />
+
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="com.example.travelshare.fragments.GroupsFragment"
+        android:label="Groupes"
+        tools:layout="@layout/fragment_groups" />
+
+    <fragment
+        android:id="@+id/groupDetailFragment"
+        android:name="com.example.travelshare.fragments.GroupDetailFragment"
+        android:label="Détails du groupe"
+        tools:layout="@layout/fragment_group_detail" >
+        <argument
+            android:name="groupId"
+            app:argType="string" />
+    </fragment>
+
+    <!-- Global actions pour la bottom navigation -->
+    <action
+        android:id="@+id/action_global_discoverFragment"
+        app:destination="@id/discoverFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="false" />
+
+    <action
+        android:id="@+id/action_global_searchFragment"
+        app:destination="@id/searchFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="false" />
+
+    <action
+        android:id="@+id/action_global_mapFragment"
+        app:destination="@id/mapFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="false" />
+
+    <action
+        android:id="@+id/action_global_notificationsFragment"
+        app:destination="@id/notificationsFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="false" />
+
+    <action
+        android:id="@+id/action_global_profileFragment"
+        app:destination="@id/profileFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="false" />
+
+</navigation>
+
